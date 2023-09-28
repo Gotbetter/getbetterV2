@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "v2",
-    "slug": "v2",
+    "name": "같베터",
+    "slug": "gotbetter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rpdyddns.gotbetter"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e99cfb79-6da2-43d7-9256-c217a4ec9e3b"
+      }
     }
   }
 }
