@@ -21,9 +21,13 @@ export { RootStackParamList, AuthStackParamList, HomeStackParamList };
 /** useNavigation Type */
 type AutoLoginManagerNavigationType = NativeStackNavigationProp<RootStackParamList, 'AutoLoginManager'>;
 
+type HomeScreenNavigationType = NativeStackNavigationProp<RootStackParamList, 'HomeRoutes'>;
+
+export { AutoLoginManagerNavigationType, HomeScreenNavigationType };
+
 /** Screen Props Type*/
 type LoginScreenProps = NativeStackScreenProps<AuthStackParamList, 'LoginScreen'>;
 
 type HomeScreenProps = NativeStackScreenProps<HomeStackParamList, 'HomeScreen'>;
 
-export { AutoLoginManagerNavigationType, LoginScreenProps, HomeScreenProps };
+export { LoginScreenProps, HomeScreenProps };
