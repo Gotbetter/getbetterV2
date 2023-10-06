@@ -3,14 +3,16 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types", "@types"],
+    "typeRoots": ["./node_modules/@types", "./types"],
     "paths": {
       "@routes/*": ["./routes/*"],
       "@components/*": ["./components/*"],
+      "@api/*": ["./api/*"],
       "@hooks/*": ["./hooks/*"],
       "@screens/*": ["./screens/*"],
       "@recoil/*": ["./recoil/*"],
-      "@types/*": ["./types/*"]
+      "@utils/*": ["./utils/*"],
+      "@images/*": ["./assets/images/*"]
     }
   }
 }
