@@ -7,13 +7,13 @@ type RootStackParamList = {
 };
 
 type AuthStackParamList = {
-  HomeRoutes: undefined;
   LoginScreen: undefined;
 };
 
 type HomeStackParamList = {
-  AuthRoutes: undefined;
   HomeScreen: undefined;
+  RoomCreateRoutes: undefined;
+  RoomCodeScreen: undefined;
 };
 
 export { RootStackParamList, AuthStackParamList, HomeStackParamList };
@@ -21,7 +21,7 @@ export { RootStackParamList, AuthStackParamList, HomeStackParamList };
 /** useNavigation Type */
 type AutoLoginManagerNavigationType = NativeStackNavigationProp<RootStackParamList, 'AutoLoginManager'>;
 
-type HomeScreenNavigationType = NativeStackNavigationProp<RootStackParamList, 'HomeRoutes'>;
+type HomeScreenNavigationType = NativeStackNavigationProp<RootStackParamList & HomeStackParamList, 'HomeRoutes'>;
 
 export { AutoLoginManagerNavigationType, HomeScreenNavigationType };
 
