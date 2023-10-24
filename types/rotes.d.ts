@@ -4,6 +4,7 @@ import { NativeStackNavigationProp, NativeStackScreenProps } from '@react-naviga
 type RootStackParamList = {
   AuthRoutes: undefined;
   HomeRoutes: undefined;
+  StudyRoomRoutes: { roomId: number };
 };
 
 type AuthStackParamList = {
@@ -16,14 +17,42 @@ type HomeStackParamList = {
   RoomCodeScreen: undefined;
 };
 
-export { RootStackParamList, AuthStackParamList, HomeStackParamList };
+type RoomCreateStackParamList = {
+  CategoryFormScreen: undefined;
+  TitleFormScreen: undefined;
+  DescriptionFormScreen: undefined;
+  DetailInformationFormScreen: undefined;
+  RuleFormScreen: undefined;
+  AccountFormScreen: undefined;
+};
+
+type StudyRoomStackParamList = {
+  StudyRoomScreen: { roomId: number };
+};
+
+export {
+  RootStackParamList,
+  AuthStackParamList,
+  HomeStackParamList,
+  RoomCreateStackParamList,
+  StudyRoomStackParamList,
+};
 
 /** useNavigation Type */
 type AutoLoginManagerNavigationType = NativeStackNavigationProp<RootStackParamList, 'AutoLoginManager'>;
 
 type HomeScreenNavigationType = NativeStackNavigationProp<RootStackParamList & HomeStackParamList, 'HomeRoutes'>;
 
-export { AutoLoginManagerNavigationType, HomeScreenNavigationType };
+type RoomCreateScreenNavigationType = NativeStackNavigationProp<RoomCreateStackParamList>;
+
+type StudyRoomScreenNavigationType = NativeStackNavigationProp<RootStackParamList & HomeStackParamList>;
+
+export {
+  AutoLoginManagerNavigationType,
+  HomeScreenNavigationType,
+  RoomCreateScreenNavigationType,
+  StudyRoomScreenNavigationType,
+};
 
 /** Screen Props Type*/
 type LoginScreenProps = NativeStackScreenProps<AuthStackParamList, 'LoginScreen'>;
