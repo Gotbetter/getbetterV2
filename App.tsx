@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AuthRoutes from '@routes/AuthRoutes';
 import HomeRoutes from '@routes/HomeRoutes';
+import StudyRoomRoutes from '@routes/StudyRoomRoutes';
 import AutoLoginManager from '@utils/AutoLoginManager';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
@@ -20,6 +21,7 @@ export default function App() {
             <Stack.Navigator initialRouteName={'AuthRoutes'} screenOptions={{ headerShown: false }}>
               <Stack.Screen name="AuthRoutes" component={AuthRoutes} />
               <Stack.Screen name="HomeRoutes" component={HomeRoutes} />
+              <Stack.Screen name="StudyRoomRoutes" component={StudyRoomRoutes} />
             </Stack.Navigator>
           </AutoLoginManager>
         </NavigationContainer>

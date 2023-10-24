@@ -1,8 +1,14 @@
+import { StudyRoomCreateRequestType } from '@recoil/room/atom';
 import APIResponseType from 'types/api';
-import { StudyRoomListType } from 'types/studyroom';
+import { StudyRoomCreateResponseType, StudyRoomListType, StudyRoomRuleType } from 'types/studyroom';
 
 import client from './client';
 
 const fetchStudyRoomList = (): Promise<APIResponseType<StudyRoomListType[]>> => client.get('/rooms');
 
-export { fetchStudyRoomList };
+const fetchStudyRoomRuleList = (): Promise<APIResponseType<StudyRoomRuleType[]>> => client.get('/common/rules');
+
+const createStudyRoom = (request: StudyRoomCreateRequestType): Promise<APIResponseType<StudyRoomCreateResponseType>> =>
+  client.post('/rooms', request);
+
+export { createStudyRoom, fetchStudyRoomList, fetchStudyRoomRuleList };

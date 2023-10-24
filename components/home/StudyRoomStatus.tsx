@@ -51,11 +51,11 @@ const Container = styled.View`
 `;
 
 type LabelProps = {
-  color?: string;
+  color: string;
 };
 
-const Label = styled.Text<LabelProps>`
-  color: ${({ color }) => color};
+const Label = styled.Text`
+  color: ${({ color }: LabelProps) => color};
   font-weight: 700;
   font-size: ${RFValue(10)}px;
 `;
