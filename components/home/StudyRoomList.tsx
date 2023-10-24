@@ -1,5 +1,5 @@
+import useRefresh from '@hooks/common/useRefresh';
 import useFetchStudyRoomList from '@hooks/useFetchStudyRoomList';
-import useRefresh from '@hooks/useRefresh';
 import useStudyRoomStatus from '@hooks/useStudyRoomStatus';
 import React from 'react';
 import { ActivityIndicator, RefreshControl } from 'react-native';
